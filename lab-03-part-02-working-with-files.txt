@@ -12,13 +12,13 @@ Follow the instructions line-by-line.
 [NO OUTPUT]
 ----------
 ==========
-2. Find out if mtec1002-lab-02 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
+2. Find out if mtec1003-lab-03 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
 
-(See steps 1-8 in http://foureyes.github.io/mtec1002-spring2014/labs/03/lab-03-part-02-working-with-files.txt)
+(See steps 1-8 in http://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/03/lab-03-part-02-working-with-files.txt)
 [NO OUTPUT]
 ----------
 ==========
-3. Change your directory mtec1002-lab-03
+3. Change your directory mtec1003-lab-03
 [NO OUTPUT]
 ----------
 ==========
@@ -36,8 +36,9 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
-
-
+ent-v321-015:my_files student$ touch foo.txt
+ent-v321-015:my_files student$ ls
+foo.txt
 
 ==========
 7. Create another new file using touch.
@@ -45,7 +46,8 @@ Copy and paste the output below.
 $ touch bar.txt
 ----------
 
-
+ent-v321-015:my_files student$ ls
+bar.txt	foo.txt
 
 ==========
 8. List the files in this directory using the flag that gives the most details.
@@ -61,7 +63,10 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
-
+ent-v321-015:my_files student$ ls -l
+total 0
+-rw-r--r--  1 student  staff  0 Feb 18 20:05 bar.txt
+-rw-r--r--  1 student  staff  0 Feb 18 20:04 foo.txtbar
 
 
 ==========
@@ -69,21 +74,22 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
-==========
+ent-v321-015:my_files student$ rm bar.txt
+=========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
+ent-v321-015:my_files student$ mv foo.txt qux.txtl
 
-
-
+ent-v321-015:my_files student$ mv foo.txt qux.txt
 ==========
-12. Go up one directory so that you're in ~/mtec1002-lab-03.
+12. Go up one directory so that you're in ~/mtec1003-lab-03.
 [NO OUTPUT]
 ----------
 
-
+ent-v321-015:mtec1003-lab-03 student$
 
 ==========
 13. Try removing the directory called my_files using rmdir.
@@ -91,7 +97,7 @@ Write the command that you used to move the file.  Copy and paste the output of 
 Write out the command that you used and what happened.
 ----------
 
-
+ent-v321-015:mtec1003-lab-03 student$
 
 ==========
 14. Try removing the directory called my_files using rm.
@@ -99,20 +105,24 @@ Write out the command that you used and what happened.
 Write out the command that you used and what happened.
 ----------
 
-
+ent-v321-015:~ student$ rm my_files
+rm: my_files: is a directory
 
 ==========
-15. MAKE SURE YOU'RE IN THE mtec1002-lab-03 directory!  
+15. MAKE SURE YOU'RE IN THE mtec1003-lab-03 directory!  
 
 Force the removal of the directory and files using the -rf flag
 
-$ rm -rf my_files
+$ 
 ----------
 
+ent-v321-015:mtec1003-lab-03 student$ rm -rf my_files
+ent-v321-015:mtec1003-lab-03 student$ ls
+books	logs	web
 
 
 ==========
-16. There's a txt file version of a book located in the mtec1002-lab-03 folder.  It is in the following directory if you're in the lab folder:
+16. There's a txt file version of a book located in the mtec1003-lab-03 folder.  It is in the following directory if you're in the lab folder:
 
 books/other/pg1232.txt
 
@@ -121,7 +131,7 @@ Use the command called cat on the file to show its contents.
 Describe what happened below.
 ----------
 
-
+it shows the content of a book but it lands on page 1232
 
 ==========
 17. That was a lot of text.  Let's find ways to limit it.  Using the same file...
@@ -132,7 +142,31 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
+ent-v321-015:other student$ head pg1232.txt
+The Project Gutenberg EBook of The Prince, by Nicolo Machiavelli
 
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org
+
+
+Title: The Prince
+
+ent-v321-015:other student$ head books.txt
+head: books.txt: No such file or directory
+ent-v321-015:other student$ head pg1232.txt
+The Project Gutenberg EBook of The Prince, by Nicolo Machiavelli
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org
+
+
+Title: The Prince
+
+ent-v321-015:other student$ 
 
 
 ==========
@@ -142,9 +176,20 @@ books/other/pg1232.txt
 
 Use tail on the file to show the contents of the end of the file.  
 
-Write the command that you used below.  Write the last line of the output below (it should be the title).
+Write the command that you used below.  Write the last line of the output below.
 ----------
+ent-v321-015:other student$ tail pg1232.txt
 
+
+Most people start at our Web site which has the main PG search facility:
+
+     http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+ent-v321-015:other student$  
 
 
 ==========
@@ -156,8 +201,9 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+ent-v321-015:other student$ less pg1232.txt
 
-
+it jumps the page 
 
 ==========
 20. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
@@ -175,4 +221,13 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
+----------
+
+
+==========
+OPTIONAL
+
+23.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
 ----------
