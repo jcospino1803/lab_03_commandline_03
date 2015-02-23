@@ -210,19 +210,18 @@ it jumps the page
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
-
+the tail shows the  end of a file head shows the content f the start of a file less the content of a file same as more cat shows all the contents
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
 
-
+wc pg1232.txt
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
-
+wc -l pg1232.txt
 
 ==========
 OPTIONAL
@@ -231,3 +230,4 @@ OPTIONAL
 
 Write the command that you used below.
 ----------
+cp *.text student.txt
